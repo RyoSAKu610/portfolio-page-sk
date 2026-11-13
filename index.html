@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RyoSAKu610 — Interactive Portfolio</title>
+<meta name="description" content="アイデアを、その日のうちに動くURLへ。AI × Web プロダクトビルダー RyoSAKu610 のインタラクティブ・ポートフォリオ。">
+<meta property="og:title" content="RyoSAKu610 — Interactive Portfolio">
+<meta property="og:description" content="ResearchPhantom、NEON MYTHOS、HEN など23作品を遊べるピクセル・インターフェースで探索。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body data-surface="sodium">
+<a class="skip-link" href="#main">メインコンテンツへ移動</a>
+
+<header class="site-header" role="banner" data-surface="sodium" id="site-header">
+  <div class="header-inner">
+    <a class="logo-link" href="#/" aria-label="RyoSAKu610, front page" id="header-logo-link"></a>
+    <nav class="main-nav" aria-label="Main" id="header-nav"></nav>
+    <div class="header-actions-desktop">
+      <a class="btn-primary btn-sm t-small" href="#/playground"><span>Pixel Maker</span></a>
+    </div>
+    <button type="button" class="menu-btn t-micro" id="menu-open-btn" aria-expanded="false" aria-controls="menu">(Menu)</button>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menu" role="dialog" aria-modal="true" aria-label="Navigation menu" data-surface="sodium">
+  <div class="menu-overlay-top">
+    <span class="t-micro">(Menu)</span>
+    <button type="button" class="menu-btn t-micro" id="menu-close-btn">(Close)</button>
+  </div>
+  <div class="grid">
+    <nav class="menu-overlay-links col-full" aria-label="Mobile navigation" id="menu-nav"></nav>
+    <div class="menu-overlay-footer col-full">
+      <button type="button" class="btn-text t-small u-anim" id="motion-toggle-mobile" aria-pressed="true">(Motion: on)</button>
+      <a class="btn-primary t-small" href="#/playground" id="menu-play-btn"><span>Pixel Maker</span></a>
+    </div>
+  </div>
+</div>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="site-footer" role="contentinfo" data-surface="ink" id="site-footer"></footer>
+
+<button type="button" class="top-btn t-micro u-anim" id="top-btn" data-surface="sodium">(Top ↑)</button>
+
+<div id="tip" role="tooltip" class="t-micro"></div>
+<canvas id="trail-canvas" aria-hidden="true"></canvas>
+<canvas id="wipe-canvas" aria-hidden="true"></canvas>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
